@@ -10,7 +10,7 @@ from supabase import create_client
 load_dotenv()  # Load environment variables from .env.local
 
 app = Flask(__name__)
-CORS(app, resources={r"/analyze-domain": {"origins": "https://seo-jump-ai.vercel.app"}})
+CORS(app, resources={r"/analyze-domain": {"origins": "https://seo-jump-ai.vercel.app/private"}})
 
 url = os.getenv("SUPABASE_URL", "url")
 key = os.getenv("SUPABASE_KEY", "key")
